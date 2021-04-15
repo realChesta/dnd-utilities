@@ -203,7 +203,7 @@ const addButtonWhenReady = () => {
     'use strict';
     let inNPC = false;
     setInterval(() => {
-        if (/\/npcs\/.+/ig.test(window.location.pathname)) {
+        if (window.location.pathname.startsWith('/npcs/add-npc')) {
             if (!inNPC) {
                 addButtonWhenReady();
                 inNPC = true;
